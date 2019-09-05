@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+
+void bubble_short(int arr[],int N)
+{
+    int i,j,temp=0;
+    for(i=1;i<=N-1;i++)
+        for(j=0;j<=N-1-i;j++)
+            if(arr[j]>arr[j+1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+}
+void main()
+{
+    int i;
+    int arr[]={17,70,12,6,8,99};
+    bubble_short(arr,6);
+    for(i=0;i<=5;i++)
+        printf("%d\n",arr[i]);
+}
+
